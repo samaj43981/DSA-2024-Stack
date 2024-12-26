@@ -1,0 +1,13 @@
+def check_json(json_str):
+    stack = Stack()
+    for char in json_str:
+        if char == '{':
+            stack.push(char)
+        elif char == '}':
+            if stack.is_empty():
+                return False
+            stack.pop()
+    return stack.is_empty()
+
+json_str = input("ป้อน JSON string: ")
+print("ผลลัพธ์: ", "ถูกต้อง" if check_json(json_str) else "ไม่ถูกต้อง")

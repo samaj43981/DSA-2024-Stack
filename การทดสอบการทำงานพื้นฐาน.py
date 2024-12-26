@@ -1,0 +1,10 @@
+def test_basic_operations():
+    stack = Stack()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    print(f"Stack หลัง push: {stack.items}")
+    print(f"ข้อมูลบนสุด: {stack.peek()}")
+    print(f"ข้อมูลที่ pop: {stack.pop()}")
+    print(f"Stack หลัง pop: {stack.items}")
+    print(f"ขนาดของ Stack: {stack.size()}")
